@@ -1,0 +1,13 @@
+table {
+  width: 100%;
+  background-color: #ffff;
+}
+
+.containerdiv{
+  padding: 30px 60px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}

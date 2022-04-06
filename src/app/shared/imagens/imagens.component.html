@@ -1,0 +1,42 @@
+<div class="containerdiv">
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="fog">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.fog}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="imagem">
+      <th mat-header-cell *matHeaderCellDef> imagem </th>
+      <td mat-cell *matCellDef="let element"> {{element.imagem}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gerencia">
+      <th mat-header-cell *matHeaderCellDef> gerencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.gerencia}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="equipe">
+      <th mat-header-cell *matHeaderCellDef> equipe </th>
+      <td mat-cell *matCellDef="let element"> {{element.equipe}} </td>
+    </ng-container>
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef> ações </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="primary">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
